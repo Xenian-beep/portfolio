@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: page title and description (shown in browser tab and Google results) -->
+  <title>MD Habib – Portfolio</title>
+  <meta name="description" content="Aspiring software developer and undergraduate computer science student in Dhaka, open to job opportunities.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION: each link points to a section id below. Delete a link if you delete its section. -->
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top">MD Habib</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" type="button" aria-label="Switch light or dark theme">Theme</button>
+    </div>
+  </nav>
+
+  <!-- GAMING SIDE DECORATIONS: only visible on wide screens (1280px and up). Purely decorative.
+       Delete both <aside> blocks to remove them. -->
+  <aside class="side side-left" aria-hidden="true">
+    <span class="spark" style="top:-34px; left:6px"></span>
+    <span class="spark" style="top:60px; left:104px; animation-delay:-1s"></span>
+    <span class="spark" style="bottom:20px; left:-4px; animation-delay:-2s"></span>
+    <div class="side-tag">PLAYER 1</div>
+    <svg class="pad" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" shape-rendering="crispEdges">
+      <path d="M10 6H54L62 18L60 32L54 36L46 30H18L10 36L4 32L2 18Z"/>
+      <path d="M15 11h4v4h4v4h-4v4h-4v-4h-4v-4h4z" fill="currentColor" stroke="none"/>
+      <rect x="44" y="12" width="5" height="5" fill="var(--accent)" stroke="none"/>
+      <rect x="51" y="18" width="5" height="5" fill="var(--accent)" stroke="none"/>
+    </svg>
+    <div class="hearts">
+      <svg viewBox="0 0 7 6" fill="currentColor"><path d="M1 0h2v1H1zM4 0h2v1H4zM0 1h7v1H0zM0 2h7v1H0zM1 3h5v1H1zM2 4h3v1H2zM3 5h1v1H3z"/></svg>
+      <svg viewBox="0 0 7 6" fill="currentColor"><path d="M1 0h2v1H1zM4 0h2v1H4zM0 1h7v1H0zM0 2h7v1H0zM1 3h5v1H1zM2 4h3v1H2zM3 5h1v1H3z"/></svg>
+      <svg viewBox="0 0 7 6" fill="currentColor"><path d="M1 0h2v1H1zM4 0h2v1H4zM0 1h7v1H0zM0 2h7v1H0zM1 3h5v1H1zM2 4h3v1H2zM3 5h1v1H3z"/></svg>
+    </div>
+    <div class="side-tag blink">PRESS START</div>
+  </aside>
+
+  <aside class="side side-right" aria-hidden="true">
+    <span class="spark" style="top:-30px; right:10px; animation-delay:-0.5s"></span>
+    <span class="spark" style="top:90px; right:-6px; animation-delay:-1.5s"></span>
+    <span class="spark" style="bottom:10px; right:100px; animation-delay:-2.5s"></span>
+    <div class="side-tag">XP</div>
+    <div class="xp"><span class="xp-fill" id="xp-fill"></span></div>
+    <div class="side-tag" id="xp-level">LVL 1</div>
+    <div class="side-tag"><span id="xp-pct">0</span>%</div>
+  </aside>
+
+  <main id="top">
+
+    <!-- HERO: first thing visitors see. The first two lines (the kicker and the heading intro) are the ones to edit. -->
+    <header class="hero">
+      <div class="hero-text">
+        <p class="kicker"><span class="dot" aria-hidden="true"></span>Open to opportunities</p>
+        <h1>Hi, I’m MD Habib.</h1>
+        <p class="lead">An aspiring software developer and undergraduate computer science student in Dhaka, building web and mobile applications.</p>
+        <div class="pills">
+          <a class="pill primary" href="mailto:habibzkolme446@gmail.com">Email me</a>
+          <a class="pill" href="https://github.com/Xenian-beep">GitHub</a>
+          <!-- EDIT: to add a CV button later, put your CV in assets/ and add: <a class="pill" href="assets/cv.pdf">Download CV</a> -->
+        </div>
+      </div>
+
+      <!-- PHOTO: save your picture as assets/images/profile.jpg (portrait works best, about 800 x 1000 px).
+           Until the file exists, the MH placeholder is shown. -->
+      <figure class="photo">
+        <span class="photo-fallback" aria-hidden="true">MH</span>
+        <img src="assets/images/profile.jpg" alt="Portrait of MD Habib" onerror="this.remove()">
+      </figure>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2><span class="num"></span>About</h2>
+      <p>I am an undergraduate computer science student based in Dhaka, Bangladesh. My coursework, lab projects and personal projects have given me working experience in C, C++, Java, PHP, SQL and JavaScript, as well as web development, database design and interface design in Figma.</p>
+      <p>I am also developing my skills in mobile app development with Flutter, which I am currently learning through hands-on practice projects.</p>
+      <p>I am seeking opportunities in which I can apply these skills, contribute to a team, and continue to develop as a software developer.</p>
+    </section>
+
+    <!-- PROJECTS: placeholder for now. When you are ready, delete the <p class="placeholder"> line,
+         then copy the commented-out example block below, remove the comment markers, and edit it. -->
+    <section id="projects">
+      <h2><span class="num"></span>Projects</h2>
+      
+
+      
+      <article class="project">
+      <div class="meta">
+      <h3>Unit Converter</h3>
+      <div class="kind">Cross-Platform Unit Conversion App</div>
+      </div>
+
+      <div class="body">
+      <p>
+      A Flutter-based unit conversion application that makes
+      converting different measurement units simple and convenient.
+      </p>
+
+      <ul class="tags">
+      <li>Flutter</li>
+      <li>Dart</li>
+      <li>Material 3</li>
+      <li>Android</li>
+      <li>Windows</li>
+      </ul>
+
+      <p class="links">
+      <a href="https://github.com/Xenian-beep/Unit-Converter"
+         target="_blank"
+         rel="noopener noreferrer">
+        View on GitHub →
+        </a>
+        </p>
+      </div>
+      </article>
+
+    <article class="project">
+    <div class="meta">
+    <h3>Task Tracker</h3>
+    <div class="kind">Personal Task Management Application</div>
+    </div>
+
+    <div class="body">
+    <p>
+      A lightweight Flutter-based task management application
+      designed to organize daily activities, track task
+      completion, and manage to-do lists with local data persistence.
+    </p>
+
+      <ul class="tags">
+      <li>Flutter</li>
+      <li>Dart</li>
+      <li>Material 3</li>
+      <li>Shared Preferences</li>
+      <li>Android</li>
+      <li>Windows</li>
+      </ul>
+
+      <p class="links">
+      <a href="https://github.com/Xenian-beep/Task_Tracker"
+         target="_blank"
+         rel="noopener noreferrer">
+        View on GitHub →
+      </a>
+      </p>
+    </di>
+    </article>
+
+    <article class="project ongoing-project">
+    <span class="project-status" title="Current Project"
+        aria-label="Current Project">
+    ⚙
+     <span class="status-tooltip">Current Project</span>
+     </span>
+
+     <div class="meta">
+     <h3>CoverMe</h3>
+     <div class="kind">Ongoing Development Project</div>
+     </div>
+
+     <div class="body">
+     <p>
+      An ongoing software project currently under active
+      development. Features and functionality are being
+      continuously improved.
+     </p>
+
+     <ul class="tags">
+      <li>In Development</li>
+      <li>Private Repository</li>
+      <li>Ongoing</li>
+      </ul>
+
+      <p class="links">
+      <span class="private-label">🔒 Private Project</span>
+      </p>
+      </div>
+    </article>
+
+      
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2><span class="num"></span>Skills</h2>
+      <div class="skills">
+        <div class="card"><h3>Programming</h3><ul class="tags"><li>C</li><li>C++</li><li>Java</li><li>Python</li><li>PHP</li><li>JavaScript</li></ul></div>
+        <div class="card"><h3>Web and data</h3><ul class="tags"><li>SQL</li><li>CSS</li></ul></div>
+        <div class="card"><h3>Mobile and design</h3><ul class="tags"><li>Flutter (beginner)</li><li>Figma</li></ul></div>
+        <div class="card"><h3>Languages</h3><ul class="tags"><li>Bangla (native)</li><li>English (proficient)</li></ul></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION: add your current university as a new .edu block at the top -->
+    <section id="education">
+      <h2><span class="num"></span>Education</h2>
+      <div class="timeline">
+        <div class="edu"><div><strong>Higher Secondary Certificate (HSC)</strong><br><small>Completed 2021</small></div><div class="score">5.00 / 5.00</div></div>
+        <div class="edu"><div><strong>Secondary School Certificate (SSC)</strong><br><small>Completed 2019</small></div><div class="score">4.89 / 5.00</div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2><span class="num"></span>Get in touch</h2>
+      <p>I am open to opportunities. Please email me and I will reply with further details.</p>
+      <div class="pills">
+        <a class="pill primary" href="mailto:habibzkolme446@gmail.com">habibzkolme446@gmail.com</a>
+        <a class="pill" href="https://github.com/Xenian-beep">GitHub</a>
+        
+        <a class="pill" href="https://www.linkedin.com/in/mdhabib446/">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year">2026</span> MD Habib</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
